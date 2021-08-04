@@ -2,7 +2,7 @@
 // versions:
 // 	protoc-gen-go v1.27.1
 // 	protoc        v3.17.3
-// source: chat.proto
+// source: sum.proto
 
 package chat
 
@@ -163,12 +163,12 @@ func file_chat_proto_rawDescGZIP() []byte {
 
 var file_chat_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_chat_proto_goTypes = []interface{}{
-	(*ChatRequest)(nil),   // 0: chat.ChatRequest
-	(*StatsResponse)(nil), // 1: chat.StatsResponse
+	(*ChatRequest)(nil),   // 0: sum.ChatRequest
+	(*StatsResponse)(nil), // 1: sum.StatsResponse
 }
 var file_chat_proto_depIdxs = []int32{
-	0, // 0: chat.ChatService.SendTxt:input_type -> chat.ChatRequest
-	1, // 1: chat.ChatService.SendTxt:output_type -> chat.StatsResponse
+	0, // 0: sum.ChatService.SendTxt:input_type -> sum.ChatRequest
+	1, // 1: sum.ChatService.SendTxt:output_type -> sum.StatsResponse
 	1, // [1:2] is the sub-list for method output_type
 	0, // [0:1] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name

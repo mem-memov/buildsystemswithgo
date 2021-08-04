@@ -1,7 +1,7 @@
 syntax = "proto3";
 package chat;
 
-option go_package = ".;chat";
+option go_package = ".;sum";
 
 message ChatRequest {
   int64 id = 1;

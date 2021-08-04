@@ -30,7 +30,7 @@ func NewChatServiceClient(cc grpc.ClientConnInterface) ChatServiceClient {
 }
 
 func (c *chatServiceClient) SendTxt(ctx context.Context, opts ...grpc.CallOption) (ChatService_SendTxtClient, error) {
-	stream, err := c.cc.NewStream(ctx, &ChatService_ServiceDesc.Streams[0], "/chat.ChatService/SendTxt", opts...)
+	stream, err := c.cc.NewStream(ctx, &ChatService_ServiceDesc.Streams[0], "/sum.ChatService/SendTxt", opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -118,7 +118,7 @@ func (x *chatServiceSendTxtServer) Recv() (*ChatRequest, error) {
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var ChatService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "chat.ChatService",
+	ServiceName: "sum.ChatService",
 	HandlerType: (*ChatServiceServer)(nil),
 	Methods:     []grpc.MethodDesc{},
 	Streams: []grpc.StreamDesc{
@@ -129,5 +129,5 @@ var ChatService_ServiceDesc = grpc.ServiceDesc{
 			ClientStreams: true,
 		},
 	},
-	Metadata: "chat.proto",
+	Metadata: "sum.proto",
 }
